@@ -1,15 +1,12 @@
 import { Gallery } from "@/components/gallery";
 import TodoList from "@/components/todolist";
+import MyGallery from "@/components/mygallery";
 
 export default function Home() {
   return (
     <main>
       <div>
-        <h1>Ilmuwan yang Luar Biasa</h1>
-        <hr />
-        <Gallery />
-        <hr />
-        <TodoList />
+        <MyGallery />
       </div>
     </main>
   );
