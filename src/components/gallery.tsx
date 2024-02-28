@@ -9,3 +9,4 @@ export function Gallery() {
         </div>
     );
 }
+

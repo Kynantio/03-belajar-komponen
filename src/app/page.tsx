@@ -7,7 +7,12 @@ export default function Home() {
   return (
     <main>
       <div>
-        <Gallery />
+        <center>
+          <h1>Ilmuwan Luar Biasa</h1>
+        </center>
+      </div>
+      <div className="image-container">
+          <Profile /><Profile /><Profile />
       </div>
     </main>
   );
