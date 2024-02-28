@@ -36,3 +36,7 @@ body {
   display: flex;
   justify-content: center;
 }
+
+.image-container > div {
+  margin-right: 100px; /* Menambahkan margin antara setiap komponen Profile */
+}
