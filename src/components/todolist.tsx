@@ -13,8 +13,7 @@ export default function TodoList() {
             <img
                 className="avatar"
                 src="https://i.imgur.com/7vQD0fPs.jpg"
-                alt={person.name} {/* Menggunakan person.name sebagai alt */}
-            />
+                alt={person.name} /> {/* Menggunakan person.name sebagai alt */}
             <ul>
                 <li>Improve the videophone</li>
                 <li>Prepare aeronautics lectures</li>

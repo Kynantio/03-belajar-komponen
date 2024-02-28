@@ -1,18 +1,15 @@
-import Image from "next/image";
-import Profile from "../components/profile";
-import styles from "../styles/global.css";
 import { Gallery } from "@/components/gallery";
+import TodoList from "@/components/todolist";
 
 export default function Home() {
   return (
     <main>
       <div>
-        <center>
-          <h1>Ilmuwan Luar Biasa</h1>
-        </center>
-      </div>
-      <div className="image-container">
-          <Profile /><Profile /><Profile />
+        <h1>Ilmuwan yang Luar Biasa</h1>
+        <hr />
+        <Gallery />
+        <hr />
+        <TodoList />
       </div>
     </main>
   );
