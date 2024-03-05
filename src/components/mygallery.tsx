@@ -1,54 +1,51 @@
 import { getImageUrl } from '@/utils/utils';
 
-export default function MyGallery() {
-  // Buat objek untuk setiap ilmuwan
-  const scientists = [
-    {
-      name: "Maria Skłodowska-Curie",
-      id: "szV5sdG",
-      profession: "Fisikawan dan kimiawan",
-      awards: "Penghargaan Nobel Fisika, Penghargaan Nobel Kimia, Medali Davy, Medali Matteucci",
-      discovery: "polonium (unsur kimia)"
-    },
-    {
-      name: "Katsuko Saruhashi",
-      id: "YfeOqp2",
-      profession: "Ahli Geokimia",
-      awards: "Penghargaan Miyake Geokimia, Penghargaan Tanaka",
-      discovery: "sebuah metode untuk mengukur karbon dioksida pada air laut"
-    }
-  ];
+interface MyProfileProps {
+  name: string;
+  imageId: string;
+  profession: string;
+  awards: string;
+  discovery: string;
+}
 
+const MyProfile: React.FC<MyProfileProps> = ({ name, imageId, profession, awards, discovery }) => {
+  return (
+    <section className="profile">
+      <h2>{name}</h2>
+      <img
+        className="avatar"
+        src={getImageUrl(imageId)}
+        alt={name}
+        width={70}
+        height={70}
+      />
+      <ul>
+        <li><b>Profesi: </b>{profession}</li>
+        <li><b>Penghargaan: </b>{awards}</li>
+        <li><b>Telah Menemukan: </b>{discovery}</li>
+      </ul>
+    </section>
+  );
+}
+
+export default function MyGallery() {
   return (
     <div>
       <h1>Notable Scientists</h1>
-      {/* Map objek ilmuwan ke dalam elemen JSX */}
-      {scientists.map((scientist, index) => (
-        <section className="profile" key={index}>
-          <h2>{scientist.name}</h2>
-          <img
-            className="avatar"
-            src={getImageUrl(scientist.id)}
-            alt={scientist.name}
-            width={70}
-            height={70}
-          />
-          <ul>
-            <li>
-              <b>Profesi: </b>
-              {scientist.profession}
-            </li>
-            <li>
-              <b>Penghargaan: </b>
-              {scientist.awards}
-            </li>
-            <li>
-              <b>Telah Menemukan: </b>
-              {scientist.discovery}
-            </li>
-          </ul>
-        </section>
-      ))}
-    </div>
-  );
+      <MyProfile
+        name="Maria Skłodowska-Curie"
+        imageId="szV5sdG"
+        profession="Fisikawan dan kimiawan"
+        awards="4 (Penghargaan Nobel Fisika, Penghargaan Nobel Kimia, Medali Davy, Medali Matteucci)"
+        discovery="polonium (unsur kimia)"
+      />
+      <MyProfile
+        name="Katsuko Saruhashi"
+        imageId="YfeOqp2"
+        profession="Ahli Geokimia"
+        awards="2 (Penghargaan Miyake Geokimia, Penghargaan Tanaka)"
+        discovery="sebuah metode untuk mengukur karbon dioksida pada air laut"
+      />
+    </div>
+  );
 }

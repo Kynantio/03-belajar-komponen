@@ -27,3 +27,13 @@ Hasilnya kurang lebih sama dengan sebelumnya, namun menggunakan cara yang berbed
 ### Soal 6
 ![Soal 6](image/Soal%206%20(1).png)
 ![Soal 6](image/Soal%206%20(2).png)
+
+### Soal 7
+![Soal 7](image/Soal%207.png)
+
+### Soal 8
+![Soal 8](image/Soal%208%20(1).png)
+![Soal 8](image/Soal%208%20(2).png)
+
+### Soal 9
+![Soal 9](image/Soal%209.png)
